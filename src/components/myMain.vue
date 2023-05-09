@@ -9,7 +9,7 @@ name: 'myMain'
 
 
 <style lang="scss" scoped>
-@import '../scss/main.scss';
+
 
 
 </style>

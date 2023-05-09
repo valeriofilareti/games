@@ -30,6 +30,7 @@
 
 
 <style lang="scss">
+@import './scss/main.scss';
 body {
   background-image: url(./assets/img/body-bg.jpg);
 }
