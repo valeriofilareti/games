@@ -1,6 +1,16 @@
 <script>
+import SpecialCategories from './partials/SpecialCategories';
 export default {
-name: 'myMain'
+name: 'myMain',
+data(){
+  return {
+
+  }
+},
+components: {
+  SpecialCategories
+}
+
 }
 </script>
 
@@ -50,7 +60,7 @@ name: 'myMain'
     </div>
     <!-- infos ----------------------------------------->
     <!-- latest-popular -------------------------------->
-    <div class="boxes">
+    <div class="boxes d-flex justify-between">
       <div class="latest">
         <div class="text">
           <span class="yellow-box">most popular</span>
@@ -66,6 +76,7 @@ name: 'myMain'
     </div>
     <!-- latest-popular -------------------------------->
   </div>
+  <SpecialCategories /> 
 </template>
 
 
@@ -75,10 +86,9 @@ span {
   display: inline-block;
 }
 .latest, .popular {
-  width: 50%;
-  height: 350px;
+  width: 48%;
+  height: 300px;
   border: 1px solid white;
-  float: left;
   padding: 10px;
 }
 .latest {
