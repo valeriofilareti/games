@@ -34,6 +34,4 @@
 body {
   background-image: url(./assets/img/body-bg.jpg);
 }
-
-
 </style>
