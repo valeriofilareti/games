@@ -1,5 +1,11 @@
 <script>
-import SpecialCategories from './partials/SpecialCategories';
+import SpecialCategories from './SpecialCategories.vue';
+import Products from './Products.vue';
+
+import { Swiper, SwiperSlide } from 'swiper/vue';
+  // import Swiper styles
+  import 'swiper/css';
+
 export default {
 name: 'myMain',
 data(){
@@ -8,13 +14,45 @@ data(){
   }
 },
 components: {
-  SpecialCategories
-}
+  SpecialCategories,
+  Products,
+  Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+    };
+  }
 
 }
 </script>
 
 <template>
+
+<swiper
+    :slides-per-view="3"
+    :space-between="50"
+    @swiper="onSwiper"
+    @slideChange="onSlideChange"
+  >
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+  </swiper>
+
+
   <!-- infos --------------------------------------------->
   <div class="container">
     <div class="infos d-flex justify-between">
@@ -77,11 +115,15 @@ components: {
     <!-- latest-popular -------------------------------->
   </div>
   <SpecialCategories /> 
+  <Products />
 </template>
 
 
 <style lang="scss" scoped>
 @import '../scss/main.scss';
+
+// @import 'swiper/css';
+
 span {
   display: inline-block;
 }

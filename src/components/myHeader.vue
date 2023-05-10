@@ -1,6 +1,14 @@
   <script>
+  import nav from '../data/nav-db.js';
+
+  
   export default {
-  name: 'myHeader'
+  name: 'myHeader',
+  data(){
+    return{
+      nav
+    }
+  }
   }
   </script>
 
@@ -20,20 +28,26 @@
       </div>
     </div>
     <div class="header-bottom">
-      <div class="container d-flex justify-between">
-        <div class="logo"><h1>LOGO</h1></div>
+      <div class="container d-flex justify-between align-center">
+        <div class="logo">
+          <img src="../assets/img/logo.png" alt="">
+        </div>
         <nav>
           <ul class="d-flex">
-            <li><a href="">link</a></li>
-            <li><a href="">link</a></li>
-            <li><a href="">link</a></li>
-            <li><a href="">link</a></li>
-            <li><a href="">link</a></li>
-            <li><a href="">link</a></li>
+            <li v-for="(link, index) in nav" :key="index"><a href="">{{ link.name }}</a></li>
           </ul>
         </nav>
-        <div class="icons">
-        <span>X</span><span>X</span><span>X</span>
+        <div class="icons d-flex align-center">
+          <span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <span>
+            <i class="fa-regular fa-user"></i>
+          </span>
+          <span>
+            <i class="fa-brands fa-shopify"></i>
+            (0)
+          </span>
         </div>
       </div>
     </div>
@@ -46,9 +60,24 @@
   padding: 12px 0;
   border-bottom: 1px solid gray;
 }
+.header-bottom {
+  padding: 10px;
+}
+li {
+  margin: 20px 35px;
+  a {
+    text-transform: capitalize;
+  }
+}
 .boxes {
   span {
     margin-right: 10px;
+  }
+}
+.icons {
+  i{
+    font-size: 20px;
+    margin-left: 35px;
   }
 }
 

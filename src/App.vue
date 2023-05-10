@@ -1,4 +1,5 @@
   <script>
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
   import myHeader from './components/myHeader.vue';
   import myJumbotron from './components/myJumbotron.vue';
   import myMain from './components/myMain.vue';
@@ -7,7 +8,7 @@
   name: 'App',
   data(){
     return{
-
+      Swiper
     }
   },
   components: {
