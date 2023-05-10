@@ -51,7 +51,7 @@
   }
 }
 .cta {
-  margin-top: 60px;
+  padding-top: 60px;
   span {
     font-size: 12px;
     border: 1px solid white;
