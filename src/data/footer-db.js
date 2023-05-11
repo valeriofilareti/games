@@ -2,35 +2,78 @@ export default [
   {
     name: 'address info',
     links: [
-      '60 29th Street San Francisco, CA 94110 507-Union Trade Center, United States of America',
-      '(+00) 123-456-789',
-      'demo@example.com',
-    ]
+      {
+        title: '60 29th Street San Francisco, CA 94110 507-Union Trade Center, United States of America',
+        icon: 'fa-solid fa-location-do'
+      },
+      {
+        title: '(+00) 123-456-789',
+        icon: 'Y',
+      },
+      {
+        title: 'demo@example.com',
+        icon: 'Z'
+      }
+    ],
+
   },
   {
     name: 'information',
     links: [
-      'bookmark',
-      'features',
-      'sitemaps',
-      'lists',
-      'contact us'
+      {
+        title: 'bookmark',
+        icon: ''
+      },
+      {
+        title: 'features',
+        icon: ''
+      },
+      {
+        title: 'sitemaps',
+        icon: ''
+      },
+      {
+        title: 'lists',
+        icon: ''
+      },
+      {
+        title: 'contact us',
+        icon: ''
+      },
     ]
   },
   {
     name: 'extras',
     links: [
-      'deliver',
-      'cart',
-      'term conditions',
-      'my account',
-      'about us',
+      {
+        title: 'deliver',
+        icon: ''
+      },
+      {
+        title: 'cart',
+        icon: ''
+      },
+      {
+        title: 'term conditions',
+        icon: ''
+      },
+      {
+        title: 'my account',
+        icon: ''
+      },
+      {
+        title: 'about us',
+        icon: ''
+      },
     ]
   },
   {
     name: 'our newsletter',
     links: [
-      'There are many variations of passages of form humour or randomised',
+      {
+        title: 'There are many variations of passages of form humour or randomised',
+        icon: ''
+      }
     ]
   },
 ]
