@@ -61,11 +61,11 @@ components: {
 
         </div>
         <div class="text">
-          <span>Free Delivery</span>
+          <span class="truck-txt">Free Delivery</span>
           <span>Free Shipping On All Order</span>
         </div>
       </div>
-      <div class="elemen d-flex">
+      <div class="element d-flex">
         <div class="img bag">
           
         </div>
@@ -129,15 +129,31 @@ components: {
 }
 .img.truck {
   background-position: center -104px;
+  transition: .5s;
+}
+.img.truck:hover {
+  background-position: center 7px;
 }
 .img.bag {
   background-position: center -328px;
+  transition: .5s;
+}
+.img.bag:hover {
+  background-position: center -216px;
 }
 .img.module {
   background-position: center -556px;
+  transition: .5s;
+}
+.img.module:hover {
+  background-position: center -445px;
 }
 .img.hand {
   background-position: center -783px;
+  transition: .5s;
+}
+.img.hand:hover {
+  background-position: center -670px;
 }
 .img.truck {
   background-position: center -104px;
