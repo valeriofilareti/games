@@ -51,7 +51,7 @@
   padding: 170px 150px;
   margin-left: 80px;
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   left: 0;
   top: 0;
   div {
@@ -71,6 +71,7 @@
     padding: 0;
     line-height: 50px;
     margin-top: 20px;
+    text-transform: capitalize;
   }
 }
 .cta {

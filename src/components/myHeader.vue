@@ -56,18 +56,26 @@
 
 
 <style lang="scss" scoped>
+@import '../scss/general/vars';
 .header-top {
   padding: 12px 0;
   border-bottom: 1px solid gray;
 }
 .header-bottom {
   padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #1e1427;
 }
 li {
   margin: 20px 35px;
   a {
     text-transform: capitalize;
   }
+}
+li :hover {
+  color: $secondary-color;
 }
 .boxes {
   span {
@@ -78,6 +86,9 @@ li {
   i{
     font-size: 20px;
     margin-left: 35px;
+  }
+  i :hover {
+    color: $secondary-color;
   }
 }
 

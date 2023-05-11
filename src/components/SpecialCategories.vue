@@ -45,6 +45,7 @@
   aspect-ratio: 4/5;
   border: 1px solid white;
   position: relative;
+  overflow: hidden;
   img {
     width: 100%;
   }
@@ -65,7 +66,9 @@
     a {
       color: $secondary-color;
     }
-
   }
+}
+.box :hover img {
+  transform: scale(1.1);
 }
 </style>
