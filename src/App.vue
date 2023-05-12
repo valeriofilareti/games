@@ -3,6 +3,7 @@
   import myHeader from './components/myHeader.vue';
   import myJumbotron from './components/myJumbotron.vue';
   import myMain from './components/myMain.vue';
+  import myReviews from './components/myReviews.vue';
   import myFooter from './components/myFooter.vue';
   export default {
   name: 'App',
@@ -15,6 +16,7 @@
     myHeader,
     myJumbotron,
     myMain,
+    myReviews,
     myFooter
   }
   }
@@ -25,6 +27,7 @@
     <myHeader/>
     <myJumbotron/>
     <myMain/>
+    <myReviews />
     <myFooter/>
   </body>
 </template>

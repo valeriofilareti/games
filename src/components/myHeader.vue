@@ -82,14 +82,14 @@ li :hover {
     margin-right: 10px;
   }
 }
-.icons {
-  i{
-    font-size: 20px;
-    margin-left: 35px;
-  }
-  i :hover {
-    color: $secondary-color;
-  }
+
+i{
+  font-size: 20px;
+  margin-left: 35px;
+  cursor: pointer;
+}
+.icons :hover i {
+  color: $secondary-color;
 }
 
 </style>

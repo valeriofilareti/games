@@ -40,10 +40,20 @@
   text-align: center;
   padding-top: 90px;
 }
+.section-title ::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: $secondary-color;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .box {
   width: 32%;
   aspect-ratio: 4/5;
-  border: 1px solid white;
   position: relative;
   overflow: hidden;
   img {

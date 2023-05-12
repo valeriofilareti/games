@@ -12,7 +12,8 @@
   </script>
 <template>
   <div class="jumbotron">
-    <img src="../assets/img/jumbo1.jpeg" alt="">
+    <img v-if="counter === 0" src="../assets/img/jumbo1.jpeg" alt="">
+    <img v-if="counter === 1" src="../assets/img/jumbo2.jpeg" alt="">
     <div class="jumbo-container">
       <div class="stock">
         <span class="yellow-box">
@@ -35,6 +36,7 @@
 
 
 <style lang="scss" scoped>
+@import '../scss/general/vars';
 .jumbotron {
   // background-image: url(../assets/img/jumbo1.jpeg);
   background-size: cover;
@@ -61,8 +63,9 @@
 .stock {
   .yellow-box {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px 25px;
     font-size: 18px;
+    font-weight: 600;
   }
 }
 .title {
@@ -78,13 +81,17 @@
   padding-top: 60px;
   span {
     font-size: 12px;
-    border: 1px solid white;
-    padding: 5px 8px;
+    
+    padding: 5px 15px;
     background-color: white;
     color: black;
     cursor: pointer;
     margin-top: 20px;
   }
+}
+.cta:hover span {
+  background-color: $secondary-color;
+  transition: 1s;
 }
 .buttons {
   position: absolute;

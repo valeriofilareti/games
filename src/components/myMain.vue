@@ -15,43 +15,14 @@ data(){
 },
 components: {
   SpecialCategories,
-  Products,
-  Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log('slide change');
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-    };
-  }
+  Products
+}
+
 
 }
 </script>
 
 <template>
-
-<!-- <swiper
-    :slides-per-view="3"
-    :space-between="50"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
-  >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-  </swiper> -->
-
 
   <!-- infos --------------------------------------------->
   <div class="container">
@@ -168,20 +139,22 @@ span {
 .latest, .popular {
   width: 48%;
   height: 300px;
-  border: 1px solid white;
   padding: 10px;
   justify-content: flex-end;
   padding-right: 90px;
   padding-top: 30px;
   .text {
     width: 215px;
+    line-height: 35px;
+    font-weight: 600;
     .yellow-box {
-      font-size: 28px;
-      padding: 0 8px;
+      font-size: 32px;
+      padding: 4px 10px;
       font-weight: 600;
+      margin-bottom: 8px;
     }
     .title {
-      font-size: 34px;
+      font-size: 39px;
     }
   }
 }
