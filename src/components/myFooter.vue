@@ -1,15 +1,20 @@
 <script>
 import footer from '../data/footer-db.js';
+import Sponsors from './Sponsors.vue';
 export default {
 name: 'myFooter',
 data(){
   return {
     footer
   }
+},
+components: {
+  Sponsors
 }
 }
 </script>
 <template>
+  <Sponsors />
   <footer>
     <div class="container d-flex">
       <div v-for="(cols, index) in footer" :key="index" class="col">
