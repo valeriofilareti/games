@@ -1,82 +1,148 @@
-  <script>
-    import { Swiper, SwiperSlide } from 'swiper/vue';
-    import { Pagination, Navigation } from 'swiper';
-    import 'swiper/css/pagination';
-    import 'swiper/css/navigation';
-    import 'swiper/css';
-    
-    
-    export default {
-      components: {
-      Swiper,
-      SwiperSlide,
-      setup(){
-        return {
-          modules: [Pagination, Navigation],
-        }
-      }
-    },
-  };
-  </script>
+<script>
+export default {
+  
+}
+
+</script>
 
 <template>
-  <swiper
-    :pagination="{
-      type: 'progressbar',
-    }"
-    :navigation="true"
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-  </swiper>
+  <!-- PERCHE SECTION TITLE IN GENERAL LO RENDE IMMENSO?? -->
+  <div class="title d-flex">
+    <h1>Our Products</h1>
+  </div>
+  <div class="container d-flex">
+
+
+  <div class="card">
+    <div class="img">
+      <img src="../assets/img/01-300x300.jpg" alt="">
+      <img class="hover-img" src="../assets/img/05-300x300.jpg" alt="">
+    </div>
+    <div class="infos">
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <div class="name">
+        <span>Shopping Mahjong Connect</span>
+      </div>
+      <div class="price">
+        <span>£100.00</span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="img">
+      <img src="../assets/img/02-300x300.jpg" alt="">
+      <img class="hover-img" src="../assets/img/06-300x300.jpg" alt="">
+    </div>
+    <div class="infos">
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <div class="name">
+        <span>Shopping Mahjong Connect</span>
+      </div>
+      <div class="price">
+        <span>£100.00</span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="img">
+      <img src="../assets/img/03-300x300.jpg" alt="">
+      <img class="hover-img" src="../assets/img/07-300x300.jpg" alt="">
+    </div>
+    <div class="infos">
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <div class="name">
+        <span>Shopping Mahjong Connect</span>
+      </div>
+      <div class="price">
+        <span>£100.00</span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="img">
+      <img src="../assets/img/04-300x300.jpg" alt="">
+      <img class="hover-img" src="../assets/img/08-300x300.jpg" alt="">
+    </div>
+    <div class="infos">
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <div class="name">
+        <span>Shopping Mahjong Connect</span>
+      </div>
+      <div class="price">
+        <span>£100.00</span>
+      </div>
+    </div>
+  </div>
+
+</div>
 </template>
 
 
-<style scoped>
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
+<style lang="scss" scoped>
+@import '../scss/general/vars';
+.title {
   justify-content: center;
-  align-items: center;
+  margin-top: 100px;
+  font-size: 25px;
+  margin-bottom: 45px;
 }
-
-.swiper-slide img {
-  display: block;
+img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+}
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: none;
+}
+.card:hover .hover-img {
+  display: block;
+}
+.card {
+  width: 25%;
+  padding: 20px;
+  position: relative;
+  .infos {
+    background-color: #170f1f ;
+    padding: 10px;
+    div {
+      margin: 5px 0;
+    }
+  }
+}
+i {
+  color: $secondary-color;
+}
+.price {
+  span{
+    color: $secondary-color;
+  }
 }
 
 </style>
